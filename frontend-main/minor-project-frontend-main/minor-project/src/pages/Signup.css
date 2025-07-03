@@ -1,0 +1,166 @@
+:root {
+    --background-light: #f5f5f5;
+    --background-dark: #121212;
+    --container-light: #ffffff;
+    --container-dark: #1e1e1e;
+    --text-light: #333333;
+    --text-dark: #f0f0f0;
+    --input-bg-light: #ffffff;
+    --input-bg-dark: #2a2a2a;
+    --input-border-light: #ddd;
+    --input-border-dark: #444;
+    --primary-color: #4f46e5;
+    --primary-color-hover: #4338ca;
+  }
+  
+  body {
+    margin: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  body.dark-mode {
+    background-color: var(--background-dark);
+  }
+  
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-light);
+    padding: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-container.dark-mode {
+    background-color: var(--background-dark);
+  }
+  
+  .signup-form-container {
+    background: var(--container-light);
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dark-mode .signup-form-container {
+    background: var(--container-dark);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+  }
+  
+  .dark-mode h1 {
+    color: var(--text-dark);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+  }
+  
+  .dark-mode label {
+    color: var(--text-dark);
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border-light);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: var(--input-bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dark-mode input[type="email"],
+  .dark-mode input[type="password"],
+  .dark-mode input[type="text"] {
+    background-color: var(--input-bg-dark);
+    border-color: var(--input-border-dark);
+    color: var(--text-dark);
+  }
+  
+  .password-input {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background-color: var(--primary-color-hover);
+  }
+  
+  .login-prompt {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .dark-mode .login-prompt {
+    color: #aaa;
+  }
+  
+  .login-prompt a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 4px;
+  }
+  
+  /* Invalid input styling */
+  input.invalid {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+  }
+  
+  input.invalid:focus {
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+  }
+  
